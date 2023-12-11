@@ -7,12 +7,17 @@
     /* ---------- COLORES ---------- */
     --boton-uno: #666CA3;
     --boton-principal: #13183F;
-    --boton-tres: #83869A;
+    --parrafo-principal-header: #83869A;
     --boton-cuatro: #FFA7C3;
     --boton-cinco: #FFFFFF;
-    --primer-gradient: linear-gradient(180deg, #ff6f48 0.04%, #f02aa6 100%);
+    --primer-gradient: linear-gradient(180deg, #FF6F48 0%, #F02AA6 100%);
     --segundo-gradient: linear-gradient(180deg, #4851ff 0%, #f02aa6 99.92%);
     --background-color: linear-gradient(180deg, #ffffff 0%, #f0f1ff 100%);
+
+
+    --background-naranjo: rgb(255,111,72);
+    --background-linear-naranjo: linear-gradient(180deg, rgba(255,111,72,1) 0%, rgba(240,42,166,1) 100%);
+    /* var(--Gradient-1, linear-gradient(180deg, #FF6F48 0%, #F02AA6 100%)); */
 
     /* ---------- TIPOGRAFIA ---------- */
     --font-family-jakarta: 'Plus Jakarta Sans', sans-serif;
@@ -20,28 +25,81 @@
 
 body{
     background-color: var(--background-color);
+    font-family: var(--font-family-jakarta);
 }
 .main{
     width: 375px;
-}
-.nav{
-background-color: blueviolet;
-
-    /* width: 100%; */
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 16px;
+}
+/* ---------- NAV ---------- */
+
+.nav{
+    width: 100%;
+    display: flex;
+    justify-content:space-between;
     align-items: center;
     margin: 16px;
 
 }
-.nav__img{
-    width: auto;
-    height: 35px;
+.nav__h1{
+    font-family: var(--font-family-jakarta);
     color: var(--boton-principal);
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
 }
 .nav__boton{    
     background-color: var(--boton-principal);
     width: 140px;
     height: 48px;
     border-radius: 28px;
+
+    font-size: 16px;
+    font-weight: 700;
+}
+/* ---------- HEADER ---------- */
+.header{
+    width: 100%;
+    /* margin: 16px; */
+    display: flex;
+    flex-direction: column;
+}
+.header__h2{
+    width: 100%;
+    margin: 38px 0 26px 0;
+
+    font-family: var(--font-family-jakarta);
+    color: var(--boton-principal);
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+
+}
+.header__parrafo{
+    width: 100%;
+    
+    color: var(--parrafo-principal-header);
+    font-family: var(--font-family-jakarta);
+    font-size: 17px;
+    font-weight: 500;
+    font-style: normal;
+    line-height: 26px;
+}
+.header__boton{
+    background: var(--background-naranjo);
+    background: var(--background-linear-naranjo);
+
+    width: 167px;
+    height: 56px;
+    margin: 24px 0 0 0;
+    border-radius: 28px;
+
+    font-size: 16px;
+    font-weight: 700;
+
 }
